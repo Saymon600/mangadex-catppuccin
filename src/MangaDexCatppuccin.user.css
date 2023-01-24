@@ -1,0 +1,377 @@
+/* ==UserStyle==
+@name           MangaDex Catppuccin
+@namespace      github.com/Saymon600/mangadex-catppuccin
+@version        0.1.0
+@description    Soothing pastel theme for MangaDex
+@author         Saymon600
+@updateURL      https://github.com/Saymon600/mangadex-catppuccin/raw/main/src/MangaDexCatppuccin.user.css
+@preprocessor   stylus
+@var select theme "Theme" ["Latte", "Frappe*", "Macchiato", "Mocha"]
+@var select accent "Accent" ["Rosewater", "Flamingo", "Pink*", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender"]
+==/UserStyle== */
+@-moz-document domain("mangadex.org"){
+    if(theme == "Latte"){
+        $type = light;
+        $rosewater = #dc8a78;
+        $flamingo = #dd7878;
+        $pink = #ea76cb;
+        $mauve = #8839ef;
+        $red = #d20f39;
+        $maroon = #e64553;
+        $peach = #fe640b;
+        $yellow = #df8e1d;
+        $green = #40a02b;
+        $teal = #179299;
+        $blue = #1e66f5;
+        $sapphire = #209fb5;
+        $sky = #04a5e5;
+        $lavender = #209fb5;
+        $text = #4c4f69;
+        $subtext1 = #5c5f77;
+        $subtext0 = #6c6f85;
+        $overlay2 = #7c7f93;
+        $overlay1 = #8c8fa1;
+        $overlay0 = #9ca0b0;
+        $surface2 = #acb0be;
+        $surface1 = #bcc0cc;
+        $surface0 = #ccd0da;
+        $base = #eff1f5;
+        $mantle = #e6e9ef;
+        $crust = #dce0e8;
+    }else if(theme == "Frappe"){
+        $type = dark;
+        $rosewater = #f2d5cf;
+        $flamingo = #eebebe;
+        $pink = #f4b8e4;
+        $mauve = #ca9ee6;
+        $red = #e78284;
+        $maroon = #ea999c;
+        $peach = #ef9f76;
+        $yellow = #e5c890;
+        $green = #a6d189;
+        $teal = #81c8be;
+        $blue = #8caaee;
+        $sapphire = #85c1dc;
+        $sky =  #99d1db;
+        $lavender = #babbf1;
+        $text = #c6d0f5;
+        $subtext1 = #b5bfe2;
+        $subtext0 = #a5adce;
+        $overlay2 = #949cbb;
+        $overlay1 = #838ba7;
+        $overlay0 = #737994;
+        $surface2 = #626880;
+        $surface1 = #51576d;
+        $surface0 = #414559;
+        $base = #303446;
+        $mantle = #292c3c;
+        $crust = #232634;
+    }else if(theme == "Macchiato"){
+        $type = dark;
+        $rosewater = #f4dbd6;
+        $flamingo = #f0c6c6;
+        $pink = #f5bde6;
+        $mauve = #c6a0f6;
+        $red = #ed8796;
+        $maroon = #ee99a0;
+        $peach = #f5a97f;
+        $yellow = #eed49f;
+        $green = #a6da95;
+        $teal = #8bd5ca;
+        $blue = #8aadf4;
+        $sapphire = #7dc4e4;
+        $sky = #91d7e3;
+        $lavender = #b7bdf8;
+        $text = #cad3f5;
+        $subtext1 = #b8c0e0;
+        $subtext0 = #a5adcb;
+        $overlay2 = #939ab7;
+        $overlay1 = #8087a2;
+        $overlay0 = #6e738d;
+        $surface2 = #5b6078;
+        $surface1 = #494d64;
+        $surface0 = #363a4f;
+        $base = #24273a;
+        $mantle = #1e2030;
+        $crust = #181926;
+    }else if(theme == "Mocha"){
+        $type = dark;
+        $rosewater = #f5e0dc;
+        $flamingo = #f2cdcd;
+        $pink = #f5c2e7;
+        $mauve = #cba6f7;
+        $red = #f38ba8;
+        $maroon = #eba0ac;
+        $peach = #fab387;
+        $yellow = #f9e2af;
+        $green = #a6e3a1;
+        $teal = #94e2d5;
+        $blue = #89b4fa;
+        $sapphire = #74c7ec;
+        $sky = #89dceb;
+        $lavender = #b4befe;
+        $text = #cdd6f4;
+        $subtext1 = #bac2de;
+        $subtext0 = #a6adc8;
+        $overlay2 = #9399b2;
+        $overlay1 = #7f849c;
+        $overlay0 = #6c7086;
+        $surface2 = #585b70;
+        $surface1 = #45475a;
+        $surface0 = #313244;
+        $base = #1e1e2e;
+        $mantle = #181825;
+        $crust = #11111b;
+    }
+
+    /*Accent Colors*/
+    if(accent=="Rosewater"){
+        $accent = $rosewater
+    }else if(accent == "Flamingo"){
+        $accent = $flamingo
+    }else if(accent == "Pink"){
+        $accent = $pink
+    }else if(accent == "Mauve"){
+        $accent = $mauve
+    }else if(accent == "Red"){
+        $accent = $red
+    }else if(accent == "Maroon"){
+        $accent = $maroon
+    }else if(accent == "Peach"){
+        $accent = $peach
+    }else if(accent == "Yellow"){
+        $accent = $yellow
+    }else if(accent == "Green"){
+        $accent = $green
+    }else if(accent == "Teal"){
+        $accent = $teal
+    }else if(accent == "Blue"){
+        $accent = $blue
+    }else if(accent == "Sapphire"){
+        $accent = $sapphire
+    }else if(accent == "Sky") {
+        $accent = $sky
+    }else if(accent == "Lavender"){
+        $accent = $lavender
+    }
+    
+    :root{
+        --md-primary: $accent
+        --md-primary-darken: $accent
+        --md-primary-darken2: $accent
+        --md-primary-lighten: $accent
+        --md-primary-lighten2: $accent
+    }
+    
+    .light {
+        color: $text;
+        color-scheme: $type;
+        --md-background: $base;
+        --md-secondary: $subtext0;
+        --md-accent-lighten2: $surface2;
+        --md-accent-lighten: $surface2;
+        --md-accent: $surface0;
+        --md-accent-darken: $mantle;
+        --md-accent-darken2: $crust;
+        --md-accent2: $surface2;
+        --md-accent3: $blue;
+        --md-danger: $red;
+        --md-danger-shade: $maroon;
+        --md-danger-bright: $rosewater;
+        --md-danger-lessBright: $flamingo;
+        --md-danger-dark: $maroon;
+        --md-status-red: $red;
+        --md-status-green: $green;
+        --md-status-yellow: $peach;
+        --md-status-blue: $blue;
+        --md-status-grey: $overlay2;
+        --md-status-purple: $mauve;
+        --md-icon-white: $text;
+        --md-icon-black: $overlay1;
+        --md-shade-bright: $subtext0;
+        --md-shade-lessBright: $subtext0;
+        --md-shade-lessBright2: $overlay2;
+        --md-shade-mid: $overlay2;
+        --md-shade-dark: $base;
+        --md-shade-lessDark: $surface1;
+        --md-user-green: $green;
+        --md-user-blue: $blue;
+        --md-user-red: $red;
+        --md-user-yellow: $peach;
+        --md-scrollbar-track: $mantle;
+        --md-scrollbar-thumb: $surface0;
+        --md-scrollbar-thumb-hover: $surface2;
+    }
+    
+    .dark_ {
+        color: $text;
+        color-scheme: $type;
+        --md-background: $base;
+        --md-secondary: $subtext0;
+        --md-accent-lighten2: $surface2;
+        --md-accent-lighten: $surface2;
+        --md-accent: $surface0;
+        --md-accent-darken: $mantle;
+        --md-accent-darken2: $crust;
+        --md-accent2: $surface2;
+        --md-accent3: $blue;
+        --md-danger: $red;
+        --md-danger-shade: $maroon;
+        --md-danger-bright: $rosewater;
+        --md-danger-lessBright: $flamingo;
+        --md-danger-dark: $maroon;
+        --md-status-red: $red;
+        --md-status-green: $green;
+        --md-status-yellow: $peach;
+        --md-status-blue: $blue;
+        --md-status-grey: $overlay2;
+        --md-status-purple: $mauve;
+        --md-icon-white: $text;
+        --md-icon-black: $overlay1;
+        --md-shade-bright: $subtext0;
+        --md-shade-lessBright: $subtext0;
+        --md-shade-lessBright2: $overlay2;
+        --md-shade-mid: $overlay2;
+        --md-shade-dark: $base;
+        --md-shade-lessDark: $surface1;
+        --md-user-green: $green;
+        --md-user-blue: $blue;
+        --md-user-red: $red;
+        --md-user-yellow: $peach;
+        --md-scrollbar-track: $mantle;
+        --md-scrollbar-thumb: $surface0;
+        --md-scrollbar-thumb-hover: $surface2;
+    }
+    
+    .slate {
+        color: $text;
+        color-scheme: $type;
+        --md-background: $base;
+        --md-secondary: $subtext0;
+        --md-accent-lighten2: $surface2;
+        --md-accent-lighten: $surface2;
+        --md-accent: $surface0;
+        --md-accent-darken: $mantle;
+        --md-accent-darken2: $crust;
+        --md-accent2: $surface2;
+        --md-accent3: $blue;
+        --md-danger: $red;
+        --md-danger-shade: $maroon;
+        --md-danger-bright: $rosewater;
+        --md-danger-lessBright: $flamingo;
+        --md-danger-dark: $maroon;
+        --md-status-red: $red;
+        --md-status-green: $green;
+        --md-status-yellow: $peach;
+        --md-status-blue: $blue;
+        --md-status-grey: $overlay2;
+        --md-status-purple: $mauve;
+        --md-icon-white: $text;
+        --md-icon-black: $overlay1;
+        --md-shade-bright: $subtext0;
+        --md-shade-lessBright: $subtext0;
+        --md-shade-lessBright2: $overlay2;
+        --md-shade-mid: $overlay2;
+        --md-shade-dark: $base;
+        --md-shade-lessDark: $surface1;
+        --md-user-green: $green;
+        --md-user-blue: $blue;
+        --md-user-red: $red;
+        --md-user-yellow: $peach;
+        --md-scrollbar-track: $mantle;
+        --md-scrollbar-thumb: $surface0;
+        --md-scrollbar-thumb-hover: $surface2;
+    }
+    
+    .user-tag div {
+        color: $accent !important;
+    }
+    
+    .md-select:focus-within .md-select__border:not(.disabled) {
+        border: 1px solid $accent !important;
+        opacity: 1;
+    }
+    
+    .md-checkbox__wrap svg path:nth-child(2) {
+        stroke: $accent;   
+    }
+    
+    .md-select svg path:nth-child(2) {
+        stroke: $accent;   
+    }
+    
+    if(theme == "Latte"){
+        .light {
+            --md-background-translucent: hsla(220,23%,95%,0.6);
+            --md-background-translucent2: hsla(220,23%,95%,0.8);
+            --md-background-transparent: hsla(220,23%,95%,0);
+        }
+        
+        .dark_ {
+            --md-background-translucent: rgba(239,241,245,0.6);
+            --md-background-translucent2: rgba(239,241,245,0.8);
+            --md-background-transparent: rgba(239,241,245,0);
+        }
+        
+        .slate {
+            --md-background-translucent: rgba(239,241,245,0.6);
+            --md-background-translucent2: rgba(239,241,245,0.8);
+            --md-background-transparent: rgba(239,241,245,0);
+        }
+    }else if(theme == "Frappe"){
+        .light {
+            --md-background-translucent: hsla(229,19%,23%,0.6);
+            --md-background-translucent2: hsla(229,19%,23%,0.8);
+            --md-background-transparent: hsla(229,19%,23%,0);
+        }
+        
+        .dark_ {
+            --md-background-translucent: rgba(48,52,70,0.6);
+            --md-background-translucent2: rgba(48,52,70,0.8);
+            --md-background-transparent: rgba(48,52,70,0);
+        }
+        
+        .slate {
+            --md-background-translucent: rgba(48,52,70,0.6);
+            --md-background-translucent2: rgba(48,52,70,0.8);
+            --md-background-transparent: rgba(48,52,70,0);
+        }
+    }else if(theme == "Macchiato"){
+        .light {
+            --md-background-translucent: hsla(232,23%,18%,0.6);
+            --md-background-translucent2: hsla(232,23%,18%,0.8);
+            --md-background-transparent: hsla(232,23%,18%,0);
+        }
+        
+        .dark_ {
+            --md-background-translucent: rgba(36,39,58,0.6);
+            --md-background-translucent2: rgba(36,39,58,0.8);
+            --md-background-transparent: rgba(36,39,58,0);
+        }
+        
+        .slate {
+            --md-background-translucent: rgba(36,39,58,0.6);
+            --md-background-translucent2: rgba(36,39,58,0.8);
+            --md-background-transparent: rgba(36,39,58,0);
+        }
+    }else if(theme == "Mocha"){
+        .light {
+            --md-background-translucent: hsla(240,21%,15%,0.6);
+            --md-background-translucent2: hsla(240,21%,15%,0.8);
+            --md-background-transparent: hsla(240,21%,15%,0);
+        }
+        
+        .dark_ {
+            --md-background-translucent: rgba(30,30,46,0.6);
+            --md-background-translucent2: rgba(30,30,46,0.8);
+            --md-background-transparent: rgba(30,30,46,0);
+        }
+        
+        .slate {
+            --md-background-translucent: rgba(30,30,46,0.6);
+            --md-background-translucent2: rgba(30,30,46,0.8);
+            --md-background-transparent: rgba(30,30,46,0);
+        }
+    }
+}
+
