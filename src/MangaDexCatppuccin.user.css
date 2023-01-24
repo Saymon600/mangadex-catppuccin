@@ -155,6 +155,10 @@
         $accent = $lavender
     }
     
+    body {
+        background-color: $base;
+    }
+    
     :root{
         --md-primary: $accent
         --md-primary-darken: $accent
@@ -300,7 +304,94 @@
         stroke: $accent;   
     }
     
+    .select__tab-active span {
+        color: $text !important;
+    }
+    
+    .select__tab span {
+        color: $overlay2
+    }
+    
+    .bg-primary  span {
+        color: $crust !important;
+    }
+    
+    .readmore-link span {
+        color: $crust;
+    }
+    
+    .readmore-link svg {
+        stroke: $crust;
+    }
+    
+    .readmore-link.expand span {
+        color: $text;
+    }
+    
+    .readmore-link.expand svg {
+        stroke: $text;
+    }
+    
+    .md-btn span {
+        color: $text;
+    }
+    
+    .md-inputwrap:focus-within .md-border {
+        border: 1px solid $accent !important;
+        opacity: 1;
+    }
+    
+    .md-textarea:focus-within .md-textarea__border {
+        border: 1px solid $accent !important;
+        opacity: 1;
+    }
+    
+    .menu__item--active-highlight {
+        background-color: $mantle !important;
+    }
+    
+    .menu__item--active-highlight div{
+        color: $text;
+    }
+    
+    .group-head div {
+        color: $text;
+    }
+    
+    .group-avatar {
+        border-color: $text !important;
+    }
+    
+    .user-head div {
+        color: $text;
+    }
+    
+    .user-avatar {
+        border-color: $text !important;
+    }
+    
+    .role-tag {
+        background-color: $subtext0 !important;
+        color: $mantle !important;
+    }
+    
+    .nuxt-link-exact-active .bg-accent {
+        border: 1px solid $accent !important;
+    }
+    
+    .glow {
+        box-shadow: none !important;
+    }
+    
     if(theme == "Latte"){
+        .header-wordmark {
+            filter: invert(28%) sepia(5%) saturate(2766%) hue-rotate(197deg) brightness(98%) contrast(84%) !important;
+        }
+        
+        .nuxt-link-active img:nth-child(2) {
+            filter: invert(28%) sepia(5%) saturate(2766%) hue-rotate(197deg) brightness(98%) contrast(84%) !important;
+        }
+        
         .light {
             --md-background-translucent: hsla(220,23%,95%,0.6);
             --md-background-translucent2: hsla(220,23%,95%,0.8);
@@ -319,6 +410,14 @@
             --md-background-transparent: rgba(239,241,245,0);
         }
     }else if(theme == "Frappe"){
+        .header-wordmark {
+            filter: invert(84%) sepia(7%) saturate(983%) hue-rotate(192deg) brightness(95%) contrast(101%) !important;
+        }
+        
+        .nuxt-link-active img:nth-child(2) {
+            filter: invert(84%) sepia(7%) saturate(983%) hue-rotate(192deg) brightness(95%) contrast(101%) !important;
+        }
+        
         .light {
             --md-background-translucent: hsla(229,19%,23%,0.6);
             --md-background-translucent2: hsla(229,19%,23%,0.8);
@@ -337,6 +436,14 @@
             --md-background-transparent: rgba(48,52,70,0);
         }
     }else if(theme == "Macchiato"){
+        .header-wordmark {
+            filter: invert(98%) sepia(91%) saturate(7051%) hue-rotate(178deg) brightness(100%) contrast(93%) !important;
+        }
+        
+        .nuxt-link-active img:nth-child(2) {
+            filter: invert(98%) sepia(91%) saturate(7051%) hue-rotate(178deg) brightness(100%) contrast(93%) !important;
+        }
+        
         .light {
             --md-background-translucent: hsla(232,23%,18%,0.6);
             --md-background-translucent2: hsla(232,23%,18%,0.8);
@@ -355,6 +462,14 @@
             --md-background-transparent: rgba(36,39,58,0);
         }
     }else if(theme == "Mocha"){
+        .header-wordmark {
+            filter: invert(80%) sepia(39%) saturate(168%) hue-rotate(191deg) brightness(100%) contrast(92%) !important;
+        }
+        
+        .nuxt-link-active img:nth-child(2) {
+            filter: invert(80%) sepia(39%) saturate(168%) hue-rotate(191deg) brightness(100%) contrast(92%) !important;
+        }
+        
         .light {
             --md-background-translucent: hsla(240,21%,15%,0.6);
             --md-background-translucent2: hsla(240,21%,15%,0.8);
