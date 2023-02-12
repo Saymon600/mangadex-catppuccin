@@ -1,7 +1,7 @@
 /* ==UserStyle==
 @name           MangaDex Catppuccin
 @namespace      github.com/Saymon600/mangadex-catppuccin
-@version        0.1.0
+@version        0.1.1
 @description    Soothing pastel theme for MangaDex
 @author         Saymon600
 @updateURL      https://github.com/Saymon600/mangadex-catppuccin/raw/main/src/MangaDexCatppuccin.user.css
@@ -9,7 +9,7 @@
 @var select theme "Theme" ["Latte", "Frappe*", "Macchiato", "Mocha"]
 @var select accent "Accent" ["Rosewater", "Flamingo", "Pink*", "Mauve", "Red", "Maroon", "Peach", "Yellow", "Green", "Teal", "Blue", "Sapphire", "Sky", "Lavender"]
 ==/UserStyle== */
-@-moz-document domain("mangadex.org"){
+@-moz-document url-prefix("https://mangadex.org"){
     if(theme == "Latte"){
         $type = light;
         $rosewater = #dc8a78;
@@ -170,6 +170,7 @@
     .light {
         color: $text;
         color-scheme: $type;
+        --text-color: $text;
         --md-background: $base;
         --md-secondary: $subtext0;
         --md-accent-lighten2: $surface2;
@@ -205,11 +206,14 @@
         --md-scrollbar-track: $mantle;
         --md-scrollbar-thumb: $surface0;
         --md-scrollbar-thumb-hover: $surface2;
+        --md-shade-mid-translucent: $surface0;
+        --md-shade-mid-translucent-less: $surface1;
     }
     
     .dark_ {
         color: $text;
         color-scheme: $type;
+        --text-color: $text;
         --md-background: $base;
         --md-secondary: $subtext0;
         --md-accent-lighten2: $surface2;
@@ -245,11 +249,14 @@
         --md-scrollbar-track: $mantle;
         --md-scrollbar-thumb: $surface0;
         --md-scrollbar-thumb-hover: $surface2;
+        --md-shade-mid-translucent: $surface0;
+        --md-shade-mid-translucent-less: $surface1;
     }
     
     .slate {
         color: $text;
         color-scheme: $type;
+        --text-color: $text;
         --md-background: $base;
         --md-secondary: $subtext0;
         --md-accent-lighten2: $surface2;
@@ -285,9 +292,11 @@
         --md-scrollbar-track: $mantle;
         --md-scrollbar-thumb: $surface0;
         --md-scrollbar-thumb-hover: $surface2;
+        --md-shade-mid-translucent: $surface0;
+        --md-shade-mid-translucent-less: $surface1;
     }
     
-    .user-tag div {
+    .user-tag a {
         color: $accent !important;
     }
     
@@ -334,6 +343,10 @@
     
     .md-btn span {
         color: $text;
+    }
+    
+    .md-btn.primary span {
+        color: $crust;
     }
     
     .md-inputwrap:focus-within .md-border {
@@ -383,12 +396,20 @@
         box-shadow: none !important;
     }
     
+    .chip.include {
+        color: $crust;
+    }
+    
+    .md--reader-pages .placeholder div {
+        background: $accent !important;
+    }
+    
     if(theme == "Latte"){
         .header-wordmark {
             filter: invert(28%) sepia(5%) saturate(2766%) hue-rotate(197deg) brightness(98%) contrast(84%) !important;
         }
         
-        .nuxt-link-active img:nth-child(2) {
+        .md-logo-wrap img:nth-child(2) {
             filter: invert(28%) sepia(5%) saturate(2766%) hue-rotate(197deg) brightness(98%) contrast(84%) !important;
         }
         
@@ -414,7 +435,7 @@
             filter: invert(84%) sepia(7%) saturate(983%) hue-rotate(192deg) brightness(95%) contrast(101%) !important;
         }
         
-        .nuxt-link-active img:nth-child(2) {
+        .md-logo-wrap img:nth-child(2) {
             filter: invert(84%) sepia(7%) saturate(983%) hue-rotate(192deg) brightness(95%) contrast(101%) !important;
         }
         
@@ -440,7 +461,7 @@
             filter: invert(98%) sepia(91%) saturate(7051%) hue-rotate(178deg) brightness(100%) contrast(93%) !important;
         }
         
-        .nuxt-link-active img:nth-child(2) {
+        .md-logo-wrap img:nth-child(2) {
             filter: invert(98%) sepia(91%) saturate(7051%) hue-rotate(178deg) brightness(100%) contrast(93%) !important;
         }
         
@@ -466,7 +487,7 @@
             filter: invert(80%) sepia(39%) saturate(168%) hue-rotate(191deg) brightness(100%) contrast(92%) !important;
         }
         
-        .nuxt-link-active img:nth-child(2) {
+        .md-logo-wrap img:nth-child(2) {
             filter: invert(80%) sepia(39%) saturate(168%) hue-rotate(191deg) brightness(100%) contrast(92%) !important;
         }
         
