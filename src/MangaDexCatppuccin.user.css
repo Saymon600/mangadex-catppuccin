@@ -404,6 +404,10 @@
         background: $accent !important;
     }
     
+    .banner-container {
+        z-index: 0 !important;
+    }
+    
     if(theme == "Latte"){
         .header-wordmark {
             filter: invert(28%) sepia(5%) saturate(2766%) hue-rotate(197deg) brightness(98%) contrast(84%) !important;
